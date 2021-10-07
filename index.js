@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return {name, price, category}
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,6 +28,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+// console.log(createMenuItem('migas', 5, 'Breakfast'));
+// console.log(createMenuItem('tacos', 8, 'Lunch'));
+// console.log(createMenuItem('enchiladas', 12, 'Dinner'));
 
 
 
@@ -47,8 +51,15 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(who){
+    if (who === 'teacher' || who === 'student'){
+      return this.price * 0.75;
+    } else {
+      return this.price * 0.90;
+    }
+  },
 }
+// console.log(burger.discount("teacher"));
 
 
 
@@ -68,7 +79,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// console.log(reviews[5].feedback);
 
 
 
@@ -77,7 +88,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feeback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews[7]);
 
 
 
